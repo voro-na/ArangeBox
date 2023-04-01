@@ -8,10 +8,10 @@ const viewModel = createViewModel(store);
 
 
 
-viewModel.bindRenderInitApp(view.RenderInitApp);
+viewModel.bindRenderInitApp(view.renderInitApp);
 viewModel.bindRenderControl(view.renderControl);
 
-view.RenderInitApp();
+view.renderInitApp();
 viewModel.init()
 
 view.onClick(viewModel.bindOnClick);
