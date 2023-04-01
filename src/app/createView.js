@@ -37,7 +37,7 @@ export const createView = () => {
     }
 
     const onInputChange = (e, type) => {
-        let str = e.data;
+        let str = e.target.value;
         let searchElememts = document.querySelector(`.${type}`).querySelectorAll('.control-item')
         searchElememts.forEach(elem => {
             let title = elem.querySelector('.control-item_title');
@@ -54,17 +54,14 @@ export const createView = () => {
 
     const renderInitApp = () => {
         container.innerHTML = `<div class='available'>Available
-        <form>
         <input type="text" placeholder = 'Input search value' class = 'input input-available'>
-        </form>
         </div>
         <div class='select'>Selected
-        <form>
         <input type="text" placeholder = 'Input search value' class = 'input input-selected'>
-        </form></div>
+        </div>
         <div class='control_available'></div>
         <div class='control_selected'></div>`
-        
+
         availableContainer = document.querySelector('.control_available');
         selectedContainer = document.querySelector('.control_selected');
 
